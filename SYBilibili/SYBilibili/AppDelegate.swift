@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         for i in 0...67
         {
             let imageName = String.localizedStringWithFormat("ic_splash_icon_000%02d.png", i)
-            print(imageName)
             let path: String = NSBundle.mainBundle().pathForResource(imageName, ofType: nil)!
             let image = UIImage.init(contentsOfFile: path)
             tmpArr.append(image!)
@@ -52,8 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        self.window?.makeKeyAndVisible()
-        self.window?.addSubview(self.view)
+        window?.makeKeyAndVisible()
+        window?.addSubview(view)
+        let navigationBar = UINavigationBar.appearance()
+        navigationBar.translucent = false
+        navigationBar.barTintColor = ColorManager.shareColorManager.colorWithString("themeColor")
         return true
     }
 
