@@ -1,3 +1,5 @@
+由于正在学习Swift，而刚好又发现了一个不错的OC版的Bilibili仿写App，于是尝试自己“翻译”成Swift版本。  
+顺便的，记录一下自己学习Swift的经历。  
 <h1>1.闭包</h1>
 	闭包表达式的语法： { (parameters) -> returnType in
 						statements
